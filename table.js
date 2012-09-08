@@ -1,7 +1,10 @@
 /**
  *
+ * tablejs
+ * By Tomas Thelander
+ * https://github.com/dekadans/tablejs
  *
- *
+ * jQuery plug-in for automatically creating HTML-tables from CSV-files.
  *
  */
 
