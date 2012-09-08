@@ -48,6 +48,22 @@
         return elems;
     };
     
+    var findInRow = function(row, ci) {
+        columns = $(row).find('td');
+        column = columns[ci];
+        
+        text = $(column).text();
+        
+        if (isNaN(text))
+        {
+            return text;
+        }
+        else
+        {
+            return parseInt(text, 10);
+        }
+    };
+    
     $.fn.tablejs = function(attr) {
         if (attr == null) attr = {};
         
@@ -77,24 +93,30 @@
                 
                 if ($.inArray(0,attr.ignorerows) == -1)
                 {
+                    elems = parseRow(datarows[0], attr.separator, attr.wrap, attr.ignorecolumns);
+                    
                     if (attr.titlesfirst)
                     {
-                        var ts = '<th class="tablejs-th">';
-                        var te = '</th>';
+                        text += '<tr class="tablejs-tr tablejs-trh">';
+                        
+                        for (i = 0, c = 0; i < elems.length; i++, c++)
+                        {
+                            if (typeof elems[i] == 'undefined')
+                            {
+                                c--;
+                                continue;
+                            }
+                            text += '<th class="tablejs-th"><a href="#" rel="'+ c +'" class="tablejs-sort">' + elems[i] + '</a></th>';
+                        }
                     }
                     else
                     {
-                        var ts = '<td class="tablejs-td">';
-                        var te = '</td>';
-                    }
-                    
-                    elems = parseRow(datarows[0], attr.separator, attr.wrap, attr.ignorecolumns);
-                    
-                    text += '<tr class="tablejs-tr tablejs-trh">';
-                    
-                    for (i in elems)
-                    {
-                        text += ts + elems[i] + te;
+                        text += '<tr class="tablejs-tr">';
+                        
+                        for (i in elems)
+                        {
+                            text += '<td class="tablejs-td">' + elems[i] + '</td>';
+                        }
                     }
                     
                     text += '</tr>';
@@ -122,6 +144,44 @@
                 }
                 
                 elm.html(text);
+                
+                elm.find('.tablejs-sort').click(function(e){
+                    e.preventDefault();
+                    var sortby = $(this).attr('rel');
+                    var sortrows = elm.find('tr:not(.tablejs-trh)');
+                    var mode = ($(this).data('mode') == 'asc' ? 'desc' : 'asc');
+                    
+                    elm.find('.tablejs-sort').data('mode','');
+                    $(this).data('mode', mode);
+                    
+                    for (i = 0; i < sortrows.length; i++)
+                    {
+                        temp = i;
+                        for (j = i+1; j < sortrows.length; j++)
+                        {
+                            if (mode == 'asc')
+                            {
+                                if (findInRow(sortrows[j], sortby) < findInRow(sortrows[temp], sortby))
+                                {
+                                    temp = j;
+                                }
+                            }
+                            else if (mode == 'desc')
+                            {
+                                if (findInRow(sortrows[j], sortby) > findInRow(sortrows[temp], sortby))
+                                {
+                                    temp = j;
+                                }
+                            }
+                        }
+                        temp2 = sortrows[temp];
+                        sortrows[temp] = sortrows[i];
+                        sortrows[i] = temp2;
+                    }
+                    
+                    elm.find('tr:not(.tablejs-trh)').remove();
+                    elm.append(sortrows);
+                });
             });
         }
     }

@@ -1,7 +1,7 @@
 tablejs
 =======
 
-tablejs is a small jQuery plug-in to automatically create HTML-tables from CSV-files.
+tablejs is a small jQuery plug-in to automatically create sortable HTML-tables from CSV-files.
 
 Live example
 ------------
@@ -46,4 +46,4 @@ All generated elements includes specific classes to be used when styling.
 Future
 ------
 
-This is just a small project on my spare time, but I'll probably try to add some more advanced functions.
+This is just a small project on my spare time, and the intention was to keep it simple, but I might add functionality over time.
