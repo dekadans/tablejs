@@ -42,3 +42,8 @@ All generated elements includes specific classes to be used when styling.
     class=tablejs-trh : The top row (the first <tr>)
     class=tablejs-th : Header element (<th>)
     class=tablejs-td : Element (<td>)
+
+Future
+------
+
+This is just a small project on my spare time, but I'll probably try to add some more advanced functions.
