@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>tablejs</title>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script type="text/javascript" src="table.js"></script>
+
+<script type="text/javascript">
+    
+    $(function(){
+        $('table').tablejs({
+            'titlesfirst' : true,
+            //'ignorecolumns' : [0],
+            //'ignorerows' : [1,2,10],
+        });
+    });
+    
+</script>
+
+<style type="text/css">
+    
+    .tablejs-table {
+        font-family: sans-serif;
+    }
+    
+    .tablejs-trh {
+        background-color: #008000;
+    }
+    
+    .tablejs-td, .tablejs-th {
+        text-align: center;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        border-bottom: 1px solid;
+    }
+    
+</style>
+
+</head>
+<body>
+
+<table src="games.csv"></table>
+
+</body>
+</html>
