@@ -6,7 +6,7 @@ tablejs is a small jQuery plug-in to automatically create HTML-tables from CSV-f
 Live example
 ------------
 
-(dev.tthe.se)[http://dev.tthe.se/tablejs/]
+http://dev.tthe.se/tablejs/
 
 How to use
 ----------
