@@ -66,6 +66,8 @@
             var elm = this;
             var text = '';
             
+            elm.html('<tr><td>Loading data</td></tr>');
+            
             $.get(csv, function(data){
                 elm.removeAttr('src');
                 elm.addClass('tablejs-table');
@@ -119,7 +121,7 @@
                     }
                 }
                 
-                elm.append(text);
+                elm.html(text);
             });
         }
     }
