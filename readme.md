@@ -30,7 +30,7 @@ Options
     ignorecolumns (array) : An array of integers indicating which (if any) columns should be ignored (starts at 0)
     ignorerows (array) : An array of integers indicating which (if any) rows should be ignored (starts at 0)
     separator (char (default: ',')) : The character used for separating values in the CSV-file
-    titlesfirst (bool (default: false)) : If the first row should use <th>-tags instead of <td>
+    titlesfirst (bool (default: false)) : If the first row contains column titles. Uses <th> instead of <td> and offers sortability.
     wrap (char (default: '"')) : The characters used when values in the file are wrapped
 
 
@@ -41,7 +41,7 @@ All generated elements includes specific classes to be used when styling.
 
     class=tablejs-table : The main table
     class=tablejs-tr : A row (<tr>)
-    class=tablejs-trh : The top row (the first <tr>)
+    class=tablejs-trh : The header row (the first <tr>, if titlesfirst is true)
     class=tablejs-th : Header element (<th>)
     class=tablejs-td : Element (<td>)
 
