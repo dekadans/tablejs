@@ -13,7 +13,9 @@ How to use
 
 Include both jQuery and table.js.
 
-Create a table-element with a source specified: <table src="values.csv"></table>
+Create a table-element with a source specified:
+
+    <table src="values.csv"></table>
 
 Call tablejs:
 
