@@ -59,6 +59,7 @@ the third column in the file will appear as the second column in the table, and 
     (bool (default: true)) : If the table should be sortable.
 
 *startsorted*
+
     (int) : Which (if any) column the table should be sorted after upon creation of the table. Displayed columns.
 
 *symbols*
