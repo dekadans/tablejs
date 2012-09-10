@@ -1,11 +1,11 @@
-Id,Titel,Platform
-1,Halo,Xbox
-2,The Sims 3,PC
-3,Gears of War ,Xbox 360
-4,Skyrim,"PC, PS 3, Xbox 360"
-5,Call of Duty: Black Ops,"PC, PS 3, Xbox 360"
-6,Battlefield 3,"PC, PS 3, Xbox 360"
-7,God of War III,Playstation 3
-8,New Super Mario Bros. Wii,Nintendo Wii
-9,The Legend of Zelda: Phantom Hourglass,Nintendo DS
-10,World of Warcraft,PC
+Id,Title,Platform,Release Date
+1,Halo,Xbox,"November 15, 2001"
+2,The Sims 3,PC,"June 2, 2009"
+3,Gears of War ,Xbox 360,"November 7, 2006"
+4,Skyrim,"PC, PS 3, Xbox 360","November 11, 2011"
+5,Call of Duty: Black Ops,"PC, PS 3, Wii, Xbox 360","November 9, 2010"
+6,Battlefield 3,"PC, PS 3, Xbox 360","October 25, 2011"
+7,God of War III,Playstation 3,"March 16, 2010"
+8,New Super Mario Bros. Wii,Nintendo Wii,"November 11, 2009"
+9,The Legend of Zelda: Phantom Hourglass,Nintendo DS,"June 23, 2007"
+10,World of Warcraft,PC,"November 23, 2004"
