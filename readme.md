@@ -8,7 +8,7 @@ Tested in newer versions of Chrome, Firefox, Internet Explorer and Opera.
 Live example
 ------------
 
-![dev.tthe.se](http://dev.tthe.se/tablejs/)
+http://dev.tthe.se/tablejs/
 
 How to use
 ----------
